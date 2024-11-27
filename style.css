@@ -1,3 +1,16 @@
 body {
     background-color: aquamarine;
 }
+
+.categoryContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto auto;
+}
+
+.categoryBox {
+    background-color: aliceblue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
