@@ -14,3 +14,41 @@ body {
     display: flex;
     justify-content: center;
 }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .questionBox {
+    margin-bottom: 20px;
+  }
+  
+  .questionBox h3 {
+    margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  
+  #score {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

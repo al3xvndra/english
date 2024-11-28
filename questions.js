@@ -7,7 +7,8 @@ const questions = [
       answer3: "went",
       correctAnswer: "went",
       category: "Past Simple",
-      level: "Beginner"
+      level: "Beginner",
+      set: 1
     },
     {
       question: "I _______ (eat) breakfast at 7 a.m. yesterday.",
@@ -16,7 +17,8 @@ const questions = [
       answer3: "eaten",
       correctAnswer: "ate",
       category: "Past Simple",
-      level: "Beginner"
+      level: "Beginner",
+      set: 1
     },
     {
       question: "She _______ (not/like) the movie.",
@@ -25,7 +27,8 @@ const questions = [
       answer3: "doesn't like",
       correctAnswer: "didn't like",
       category: "Past Simple",
-      level: "Intermediate"
+      level: "Intermediate",
+      set: 2
     },
     {
       question: "Where _______ you go last summer?",
@@ -34,7 +37,8 @@ const questions = [
       answer3: "was",
       correctAnswer: "did",
       category: "Past Simple",
-      level: "Intermediate"
+      level: "Intermediate",
+      set: 3
     },
   
     // Past Continuous
@@ -45,7 +49,8 @@ const questions = [
       answer3: "watching",
       correctAnswer: "was watching",
       category: "Past Continuous",
-      level: "Intermediate"
+      level: "Intermediate",
+      set: 1
     },
     {
       question: "They _______ (play) football at 5 p.m. yesterday.",
@@ -54,7 +59,8 @@ const questions = [
       answer3: "were playing",
       correctAnswer: "were playing",
       category: "Past Continuous",
-      level: "Intermediate"
+      level: "Intermediate",
+      set: 1
     },
     {
       question: "He _______ (not/work) at 9 o'clock yesterday.",
@@ -63,7 +69,8 @@ const questions = [
       answer3: "didn't work",
       correctAnswer: "wasn't working",
       category: "Past Continuous",
-      level: "Intermediate"
+      level: "Intermediate",
+      set: 1
     },
     {
       question: "What _______ she _______ (do) when you saw her?",
@@ -72,7 +79,8 @@ const questions = [
       answer3: "did / do",
       correctAnswer: "was / doing",
       category: "Past Continuous",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
   
     // Past Perfect
@@ -83,7 +91,8 @@ const questions = [
       answer3: "was leaving",
       correctAnswer: "had left",
       category: "Past Perfect",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
     {
       question: "I _______ (never/see) a movie like that before.",
@@ -92,7 +101,8 @@ const questions = [
       answer3: "was never seeing",
       correctAnswer: "had never seen",
       category: "Past Perfect",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
     {
       question: "She _______ (already/eat) when we arrived.",
@@ -101,7 +111,8 @@ const questions = [
       answer3: "was already eating",
       correctAnswer: "had already eaten",
       category: "Past Perfect",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
     {
       question: "They _______ (finish) the report before the meeting started.",
@@ -110,7 +121,8 @@ const questions = [
       answer3: "have finished",
       correctAnswer: "had finished",
       category: "Past Perfect",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
   
     // Past Perfect Continuous
@@ -121,7 +133,8 @@ const questions = [
       answer3: "were / studying",
       correctAnswer: "had / been studying",
       category: "Past Perfect Continuous",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
     {
       question: "She _______ (work) in the garden for two hours when it started raining.",
@@ -130,7 +143,8 @@ const questions = [
       answer3: "worked",
       correctAnswer: "had been working",
       category: "Past Perfect Continuous",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
     {
       question: "We _______ (wait) for an hour when the bus finally arrived.",
@@ -139,7 +153,8 @@ const questions = [
       answer3: "had waited",
       correctAnswer: "had been waiting",
       category: "Past Perfect Continuous",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     },
     {
       question: "He _______ (not/sleep) well for weeks before he went to the doctor.",
@@ -148,7 +163,8 @@ const questions = [
       answer3: "wasn't sleeping",
       correctAnswer: "hadn't been sleeping",
       category: "Past Perfect Continuous",
-      level: "Advanced"
+      level: "Advanced",
+      set: 1
     }
   ];
   
