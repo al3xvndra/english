@@ -107,3 +107,13 @@ button:disabled {
   border: 2px solid rgb(0, 0, 0);
   padding: 1rem 2rem;
 }
+
+/* Add styles for correct and wrong inputs */
+.correctInput {
+  border: 2px solid green;
+  background-color: #d4edda;
+}
+.wrongInput {
+  border: 2px solid red;
+  background-color: #f8d7da;
+}
