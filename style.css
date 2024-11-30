@@ -51,4 +51,27 @@ body {
     margin-top: 20px;
     font-weight: bold;
   }
-  
+
+  .answerDiv {
+    padding: 1rem;
+    width: 100px;
+    background-color: white;
+  }  
+
+/* Style for the correct answer */
+.correctAnswer {
+  background-color: green; /* Green background for correct answer */
+  color: white; /* Text color white */
+}
+
+/* Style for the wrong answer */
+.wrongAnswer {
+  background-color: red; /* Red background for wrong answer */
+  color: white; /* Text color white */
+}
+
+/* Style for radio buttons and labels */
+.neutralAnswer input[type="radio"] {
+  margin-right: 10px;
+}
+

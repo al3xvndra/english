@@ -1,170 +1,50 @@
 const questions = [
-    // Past Simple
-    {
-      question: "What is the past simple form of 'go'?",
-      answer1: "goes",
-      answer2: "gone",
-      answer3: "went",
-      correctAnswer: "went",
-      category: "Past Simple",
-      level: "Beginner",
-      set: 1
-    },
-    {
-      question: "I _______ (eat) breakfast at 7 a.m. yesterday.",
-      answer1: "ate",
-      answer2: "eat",
-      answer3: "eaten",
-      correctAnswer: "ate",
-      category: "Past Simple",
-      level: "Beginner",
-      set: 1
-    },
-    {
-      question: "She _______ (not/like) the movie.",
-      answer1: "didn't liked",
-      answer2: "didn't like",
-      answer3: "doesn't like",
-      correctAnswer: "didn't like",
-      category: "Past Simple",
-      level: "Intermediate",
-      set: 2
-    },
-    {
-      question: "Where _______ you go last summer?",
-      answer1: "did",
-      answer2: "do",
-      answer3: "was",
-      correctAnswer: "did",
-      category: "Past Simple",
-      level: "Intermediate",
-      set: 3
-    },
+  // Past Simple
+  { question: "What is the past simple form of 'go'?", answer1: "goes", answer2: "gone", answer3: "went", correctAnswer: "went", category: "Past Simple", level: "Beginner", set: 1 },
+  { question: "What is the past simple form of 'eat'?", answer1: "eats", answer2: "ate", answer3: "eaten", correctAnswer: "ate", category: "Past Simple", level: "Beginner", set: 1 },
+  { question: "What is the past simple form of 'write'?", answer1: "wrote", answer2: "written", answer3: "writes", correctAnswer: "wrote", category: "Past Simple", level: "Intermediate", set: 2 },
+  { question: "What is the past simple form of 'sing'?", answer1: "sing", answer2: "sang", answer3: "sung", correctAnswer: "sang", category: "Past Simple", level: "Intermediate", set: 2 },
+  { question: "What is the past simple form of 'run'?", answer1: "ran", answer2: "running", answer3: "runs", correctAnswer: "ran", category: "Past Simple", level: "Advanced", set: 3 },
+  { question: "What is the past simple form of 'begin'?", answer1: "began", answer2: "begun", answer3: "beginning", correctAnswer: "began", category: "Past Simple", level: "Advanced", set: 3 },
+  { question: "What is the past simple form of 'choose'?", answer1: "chosen", answer2: "chose", answer3: "chooses", correctAnswer: "chose", category: "Past Simple", level: "Advanced", set: 4 },
+  { question: "What is the past simple form of 'break'?", answer1: "broke", answer2: "broken", answer3: "breaks", correctAnswer: "broke", category: "Past Simple", level: "Advanced", set: 4 },
+  { question: "What is the past simple form of 'drink'?", answer1: "drinks", answer2: "drank", answer3: "drunk", correctAnswer: "drank", category: "Past Simple", level: "Intermediate", set: 5 },
+  { question: "What is the past simple form of 'drive'?", answer1: "drives", answer2: "drove", answer3: "driven", correctAnswer: "drove", category: "Past Simple", level: "Intermediate", set: 5 },
+
+  // Past Continuous
+  { question: "What is the past continuous form of 'run'?", answer1: "was running", answer2: "ran", answer3: "is running", correctAnswer: "was running", category: "Past Continuous", level: "Beginner", set: 1 },
+  { question: "What is the past continuous form of 'eat'?", answer1: "eating", answer2: "was eating", answer3: "ate", correctAnswer: "was eating", category: "Past Continuous", level: "Beginner", set: 1 },
+  { question: "What is the past continuous form of 'sing'?", answer1: "was singing", answer2: "singing", answer3: "sang", correctAnswer: "was singing", category: "Past Continuous", level: "Intermediate", set: 2 },
+  { question: "What is the past continuous form of 'write'?", answer1: "was writing", answer2: "writes", answer3: "written", correctAnswer: "was writing", category: "Past Continuous", level: "Intermediate", set: 2 },
+  { question: "What is the past continuous form of 'go'?", answer1: "going", answer2: "went", answer3: "was going", correctAnswer: "was going", category: "Past Continuous", level: "Advanced", set: 3 },
+  { question: "What is the past continuous form of 'work'?", answer1: "worked", answer2: "was working", answer3: "working", correctAnswer: "was working", category: "Past Continuous", level: "Advanced", set: 3 },
+  { question: "What is the past continuous form of 'drive'?", answer1: "was driving", answer2: "drove", answer3: "driven", correctAnswer: "was driving", category: "Past Continuous", level: "Advanced", set: 4 },
+  { question: "What is the past continuous form of 'study'?", answer1: "was studying", answer2: "studied", answer3: "studying", correctAnswer: "was studying", category: "Past Continuous", level: "Advanced", set: 4 },
+  { question: "What is the past continuous form of 'sleep'?", answer1: "was sleeping", answer2: "slept", answer3: "sleeping", correctAnswer: "was sleeping", category: "Past Continuous", level: "Intermediate", set: 5 },
+  { question: "What is the past continuous form of 'read'?", answer1: "was reading", answer2: "read", answer3: "reads", correctAnswer: "was reading", category: "Past Continuous", level: "Intermediate", set: 5 },
+
+  // Past Perfect
+  { question: "What is the past perfect form of 'go'?", answer1: "had gone", answer2: "went", answer3: "was going", correctAnswer: "had gone", category: "Past Perfect", level: "Beginner", set: 1 },
+  { question: "What is the past perfect form of 'eat'?", answer1: "had eaten", answer2: "ate", answer3: "was eating", correctAnswer: "had eaten", category: "Past Perfect", level: "Beginner", set: 1 },
+  { question: "What is the past perfect form of 'write'?", answer1: "had written", answer2: "wrote", answer3: "was writing", correctAnswer: "had written", category: "Past Perfect", level: "Intermediate", set: 2 },
+  { question: "What is the past perfect form of 'sing'?", answer1: "had sung", answer2: "sang", answer3: "was singing", correctAnswer: "had sung", category: "Past Perfect", level: "Intermediate", set: 2 },
+  { question: "What is the past perfect form of 'run'?", answer1: "had run", answer2: "ran", answer3: "was running", correctAnswer: "had run", category: "Past Perfect", level: "Advanced", set: 3 },
+  { question: "What is the past perfect form of 'begin'?", answer1: "had begun", answer2: "began", answer3: "was beginning", correctAnswer: "had begun", category: "Past Perfect", level: "Advanced", set: 3 },
+  { question: "What is the past perfect form of 'choose'?", answer1: "had chosen", answer2: "chose", answer3: "was choosing", correctAnswer: "had chosen", category: "Past Perfect", level: "Advanced", set: 4 },
+  { question: "What is the past perfect form of 'break'?", answer1: "had broken", answer2: "broke", answer3: "was breaking", correctAnswer: "had broken", category: "Past Perfect", level: "Advanced", set: 4 },
+  { question: "What is the past perfect form of 'drink'?", answer1: "had drunk", answer2: "drank", answer3: "was drinking", correctAnswer: "had drunk", category: "Past Perfect", level: "Intermediate", set: 5 },
+  { question: "What is the past perfect form of 'drive'?", answer1: "had driven", answer2: "drove", answer3: "was driving", correctAnswer: "had driven", category: "Past Perfect", level: "Intermediate", set: 5 },
   
-    // Past Continuous
-    {
-      question: "I _______ (watch) TV when the phone rang.",
-      answer1: "watched",
-      answer2: "was watching",
-      answer3: "watching",
-      correctAnswer: "was watching",
-      category: "Past Continuous",
-      level: "Intermediate",
-      set: 1
-    },
-    {
-      question: "They _______ (play) football at 5 p.m. yesterday.",
-      answer1: "were played",
-      answer2: "was playing",
-      answer3: "were playing",
-      correctAnswer: "were playing",
-      category: "Past Continuous",
-      level: "Intermediate",
-      set: 1
-    },
-    {
-      question: "He _______ (not/work) at 9 o'clock yesterday.",
-      answer1: "wasn't worked",
-      answer2: "wasn't working",
-      answer3: "didn't work",
-      correctAnswer: "wasn't working",
-      category: "Past Continuous",
-      level: "Intermediate",
-      set: 1
-    },
-    {
-      question: "What _______ she _______ (do) when you saw her?",
-      answer1: "was / doing",
-      answer2: "is / doing",
-      answer3: "did / do",
-      correctAnswer: "was / doing",
-      category: "Past Continuous",
-      level: "Advanced",
-      set: 1
-    },
-  
-    // Past Perfect
-    {
-      question: "By the time we arrived, she _______ (leave).",
-      answer1: "had leave",
-      answer2: "had left",
-      answer3: "was leaving",
-      correctAnswer: "had left",
-      category: "Past Perfect",
-      level: "Advanced",
-      set: 1
-    },
-    {
-      question: "I _______ (never/see) a movie like that before.",
-      answer1: "have never seen",
-      answer2: "had never seen",
-      answer3: "was never seeing",
-      correctAnswer: "had never seen",
-      category: "Past Perfect",
-      level: "Advanced",
-      set: 1
-    },
-    {
-      question: "She _______ (already/eat) when we arrived.",
-      answer1: "had already ate",
-      answer2: "had already eaten",
-      answer3: "was already eating",
-      correctAnswer: "had already eaten",
-      category: "Past Perfect",
-      level: "Advanced",
-      set: 1
-    },
-    {
-      question: "They _______ (finish) the report before the meeting started.",
-      answer1: "had finished",
-      answer2: "finished",
-      answer3: "have finished",
-      correctAnswer: "had finished",
-      category: "Past Perfect",
-      level: "Advanced",
-      set: 1
-    },
-  
-    // Past Perfect Continuous
-    {
-      question: "How long _______ you _______ (study) English when you passed the exam?",
-      answer1: "had / been studying",
-      answer2: "have / been studying",
-      answer3: "were / studying",
-      correctAnswer: "had / been studying",
-      category: "Past Perfect Continuous",
-      level: "Advanced",
-      set: 1
-    },
-    {
-      question: "She _______ (work) in the garden for two hours when it started raining.",
-      answer1: "had been working",
-      answer2: "was working",
-      answer3: "worked",
-      correctAnswer: "had been working",
-      category: "Past Perfect Continuous",
-      level: "Advanced",
-      set: 1
-    },
-    {
-      question: "We _______ (wait) for an hour when the bus finally arrived.",
-      answer1: "had been waiting",
-      answer2: "were waiting",
-      answer3: "had waited",
-      correctAnswer: "had been waiting",
-      category: "Past Perfect Continuous",
-      level: "Advanced",
-      set: 1
-    },
-    {
-      question: "He _______ (not/sleep) well for weeks before he went to the doctor.",
-      answer1: "hadn't been sleeping",
-      answer2: "hadn't slept",
-      answer3: "wasn't sleeping",
-      correctAnswer: "hadn't been sleeping",
-      category: "Past Perfect Continuous",
-      level: "Advanced",
-      set: 1
-    }
+  // Past Perfect Continuous
+  { question: "What is the past perfect continuous form of 'run'?", answer1: "had been running", answer2: "was running", answer3: "ran", correctAnswer: "had been running", category: "Past Perfect Continuous", level: "Beginner", set: 1 },
+  { question: "What is the past perfect continuous form of 'eat'?", answer1: "had been eating", answer2: "was eating", answer3: "ate", correctAnswer: "had been eating", category: "Past Perfect Continuous", level: "Beginner", set: 1 },
+  { question: "What is the past perfect continuous form of 'sing'?", answer1: "had been singing", answer2: "was singing", answer3: "sang", correctAnswer: "had been singing", category: "Past Perfect Continuous", level: "Intermediate", set: 2 },
+  { question: "What is the past perfect continuous form of 'write'?", answer1: "had been writing", answer2: "was writing", answer3: "wrote", correctAnswer: "had been writing", category: "Past Perfect Continuous", level: "Intermediate", set: 2 },
+  { question: "What is the past perfect continuous form of 'go'?", answer1: "had been going", answer2: "was going", answer3: "went", correctAnswer: "had been going", category: "Past Perfect Continuous", level: "Advanced", set: 3 },
+  { question: "What is the past perfect continuous form of 'work'?", answer1: "had been working", answer2: "was working", answer3: "worked", correctAnswer: "had been working", category: "Past Perfect Continuous", level: "Advanced", set: 3 },
+  { question: "What is the past perfect continuous form of 'drive'?", answer1: "had been driving", answer2: "was driving", answer3: "drove", correctAnswer: "had been driving", category: "Past Perfect Continuous", level: "Advanced", set: 4 },
+  { question: "What is the past perfect continuous form of 'study'?", answer1: "had been studying", answer2: "studied", answer3: "was studying", correctAnswer: "had been studying", category: "Past Perfect Continuous", level: "Advanced", set: 4 },
+  { question: "What is the past perfect continuous form of 'sleep'?", answer1: "had been sleeping", answer2: "slept", answer3: "was sleeping", correctAnswer: "had been sleeping", category: "Past Perfect Continuous", level: "Intermediate", set: 5 },
+  { question: "What is the past perfect continuous form of 'read'?", answer1: "had been reading", answer2: "read", answer3: "was reading", correctAnswer: "had been reading", category: "Past Perfect Continuous", level: "Intermediate", set: 5 },
   ];
-  
+
