@@ -42,36 +42,68 @@ body {
     margin-bottom: 10px;
   }
   
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-  }
-  
   #score {
     margin-top: 20px;
     font-weight: bold;
   }
 
-  .answerDiv {
-    padding: 1rem;
-    width: 100px;
-    background-color: white;
-  }  
+/* Neutral answer */
+.neutralAnswer {
+  background-color: #f0f0f0;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  padding: 10px 10px 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
 
-/* Style for the correct answer */
+/* Selected answer */
+.selectedAnswer {
+  background-color: #787878;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 10px 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+/* Correct answer */
 .correctAnswer {
-  background-color: green; /* Green background for correct answer */
-  color: white; /* Text color white */
+  background-color: #28a745;
+  color: white;
+  border: 2px solid rgb(18, 69, 0);
+  padding: 10px 10px 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
 }
 
-/* Style for the wrong answer */
+/* Wrong answer */
 .wrongAnswer {
-  background-color: red; /* Red background for wrong answer */
-  color: white; /* Text color white */
+  background-color: #dc3545;
+  color: white;
+  border: 2px solid rgb(78, 0, 0);
+  padding: 10px 10px 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
 }
 
-/* Style for radio buttons and labels */
-.neutralAnswer input[type="radio"] {
-  margin-right: 10px;
+button:disabled {
+  cursor: default;
 }
 
+#checkAnswersBtn {
+  background-color: #5279a9;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 1rem 2rem;
+}
+
+#restartBtn{
+  background-color: #d75454;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 1rem 2rem;
+}
