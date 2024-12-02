@@ -1,0 +1,19 @@
+// Typed question
+// { question: "If you _____ water, it boils.", correctAnswer: "heat", category: "Conditionals0", level: "Beginner", set: 0, type: "typed" },
+
+// MCQ
+// { question: "What is the past simple form of 'go'?", answer1: "goes", answer2: "gone", answer3: "went", correctAnswer: "went", category: "Past Simple", level: "Beginner", set: 1, type: "multiple" },
+
+// Fill in the blank
+{/* <p>1. If you <input class="neutralInput" type="text" name="q2" data-answer="heat"> (to heat) the water, it <input class="neutralInput" type="text" name="q2" data-answer="boils"> (to boil).
+</p> */}
+
+// Dropdown menu
+
+<select class="neutralInput" name="q3" data-answer="no">
+  <option value="" selected disabled></option>
+  <option value="yes">Yes</option>
+  <option value="no">No</option>
+  <option value="maybe">Maybe</option>
+</select>
+        

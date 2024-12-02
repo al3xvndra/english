@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>English Quiz</title>
   <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <script src="../input.js"></script>
 </head>
 <body>
@@ -16,19 +19,24 @@
       <li><a href="../vocabulary/vocabulary.html">vocabulary</a></li>
     </ul>
   </nav>
-  <h1 id="h">English Practice Quiz</h1>
+  
   <main>
+    <h1 id="h">English Practice Quiz</h1>
     <form name="conditionals01">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing 
-        <input class="neutralInput" type="text" name="q1" data-answer="hello"> 
-        elit. Ipsa beatae voluptates suscipit repellat dolores in! Adipisci 
-        <input class="neutralInput" type="text" name="q2" data-answer="went"> 
-        perferendis odio ab! Deleniti odit assumenda tempora sed officia 
-        <input class="neutralInput" type="text" name="q3" data-answer="no"> 
-        laudantium delectus ipsum voluptas quaerat?
+      <p class="inputParagraph">1. If you <input class="neutralInput" type="text" data-answer="heat"> (to heat) the water, it <input class="neutralInput" type="text" name="q2" data-answer="boils"> (to boil).
       </p>
-      <input id="submitButton" type="button" value="Submit">
-      <input id="resetButton" type="button" value="Reset">
+      <p class="inputParagraph">2. If I <input class="neutralInput" type="text" data-answer="exercise"> (to exercise) daily, I <input class="neutralInput" type="text" name="q2" data-answer="will become"> (to become) fit.
+      </p>
+      <p class="inputParagraph">3. If you <input class="neutralInput" type="text" data-answer="are"> (to be) free tonight, we <input class="neutralInput" type="text" name="q2" data-answer="can"> go out for a drink, or to the cinema.</p>
+      <p class="inputParagraph">He <select class="neutralInput" data-answer="will be">
+        <option value="" selected disabled></option>
+        <option value="is">is</option>
+        <option value="will be">will be</option>
+        <option value="would be">would be</option>
+      </select> depressed if he fails the exam.</p>
+         
+      <input id="submitButton" class="checkAnswersButton" type="button" value="Check Answers">
+      <input id="resetButton" class="resetButton" type="button" value="Reset">
     </form>
     <p id="score"></p>
   </main>
