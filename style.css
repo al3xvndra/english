@@ -115,7 +115,7 @@ nav ul li a:hover {
 nav ul li a {
   text-decoration: none;
   color: black;
-  font-family: "Poppins";
+  font-family: 'Poppins', sans-serif;
   font-size: large;
   text-transform: capitalize;
   padding: 0.4rem 2rem;
@@ -131,7 +131,7 @@ main {
 }
 
 div #heading {
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   font-size: xxx-large;
   display: flex;
   justify-content: center;
@@ -153,7 +153,7 @@ div #heading {
 .categoryBox a {
   text-decoration: none;
   color: black;
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   width: 100%;
   display: flex;
   justify-content: center;
@@ -168,7 +168,7 @@ div #heading {
   right: 10px;
   justify-content: center;
   align-items: center;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* exercises */
@@ -199,6 +199,7 @@ div #heading {
 #score {
   margin-top: 20px;
   font-weight: bold;
+  font-family: 'Poppins', sans-serif;
 }
 
 #pastSimple:hover, #pastContinuous:hover, #pastPerfect:hover, #pastPerfectContinuous:hover{
@@ -226,6 +227,7 @@ div #heading {
   width: 100%;
   display: flex;
   justify-content: left;
+  font-family: 'Poppins', sans-serif;
 }
 
 .neutralAnswer:hover {
@@ -241,28 +243,31 @@ div #heading {
   width: 100%;
   display: flex;
   justify-content: left;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Correct answer */
 .correctAnswer {
   background-color: var(--green);
-  color: white;
+  color: black;
   border: 2px solid black;
   padding: 10px 10px 10px 20px;
   width: 100%;
   display: flex;
   justify-content: left;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Wrong answer */
 .wrongAnswer {
   background-color: var(--red);
-  color: white;
+  color: black;
   border: 2px solid black;
   padding: 10px 10px 10px 20px;
   width: 100%;
   display: flex;
   justify-content: left;
+  font-family: 'Poppins', sans-serif;
 }
 
 button:disabled {
@@ -270,20 +275,20 @@ button:disabled {
 }
 
 form {
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
 }
 
 .inputParagraph {
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }
 
 input {
   border: 2px solid black;
-  padding: 10px 20px 10px 20px;
-  margin: 0 0.5rem;
-  font-family: Poppins;
+  padding: 5px 20px 5px 20px;
+  margin: 0 0.2rem;
+  font-family: 'Poppins', sans-serif;
   font-size: medium;
-  width: 175px;
+  width: 100px;
 }
 
 input[type=text]:focus {
@@ -294,21 +299,33 @@ input[type=text]:focus {
 select {
   background-color: white;
   border: 2px solid black;
-  padding: 10px 10px 10px 20px;
-  margin: 0 0.5rem;
-  font-family: Poppins;
+  padding: 5px 20px 5px 20px;
+  margin: 0 0.2rem;
+  font-family: 'Poppins', sans-serif;
   font-size: medium;
-  width: 175px;
+  width: 100x;
+}
+
+select option {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }
 
 /* Add styles for correct and wrong inputs */
 .correctInput {
+  background-color: var(--green);
+  color: black;
   border: 2px solid black;
-  color: var(--green);
 }
 .wrongInput {
+  background-color: var(--red);
+  color: black;
   border: 2px solid black;
-  color: var(--red);
+}
+
+.filledCorrectAnswer {
+  background-color: aliceblue; /* Light blue for distinction */
+  color: rgb(160, 188, 213);
 }
 
 .checkAnswersButton {
@@ -317,6 +334,8 @@ select {
   padding: 1rem 2rem;
   cursor: pointer;
   width: auto;
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .resetButton {
@@ -325,6 +344,7 @@ select {
   padding: 1rem 2rem;
   cursor: pointer;
   width: auto;
+  font-family: 'Poppins', sans-serif;
 }
 
 .pink {

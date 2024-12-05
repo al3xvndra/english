@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     exerciseHeading.appendChild(categoryHeading);
   }
 
+  // Helper function to shuffle an array
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  };
+
   // Dynamically generate question elements
   filteredQuestions.forEach((question, index) => {
     const questionDiv = document.createElement('div');
@@ -40,17 +48,26 @@ document.addEventListener('DOMContentLoaded', () => {
       inputField.classList.add('typedAnswerInput');
       questionDiv.appendChild(inputField);
     } else {
-      // If the question is multiple choice, create answer buttons
+      // If the question is multiple choice, shuffle and create answer buttons
       const answersList = document.createElement('ul');
-      ['answer1', 'answer2', 'answer3'].forEach((answerKey) => {
+
+      // Extract answers and shuffle them
+      const answers = ['answer1', 'answer2', 'answer3'].map(answerKey => ({
+        text: question[answerKey],
+        correct: question[answerKey] === question.correctAnswer
+      }));
+      shuffleArray(answers);
+
+      // Generate buttons for shuffled answers
+      answers.forEach(answer => {
         const answerItem = document.createElement('li');
 
         // Create a button for each answer
         const answerButton = document.createElement('button');
         answerButton.classList.add('neutralAnswer');
-        answerButton.textContent = question[answerKey];
+        answerButton.textContent = answer.text;
         answerButton.dataset.questionId = index; // To identify the question
-        answerButton.dataset.answer = question[answerKey]; // To identify the selected answer
+        answerButton.dataset.answer = answer.text; // To identify the selected answer
 
         // Add click event to mark the button as selected
         answerButton.addEventListener('click', () => {
@@ -72,82 +89,65 @@ document.addEventListener('DOMContentLoaded', () => {
         answerItem.appendChild(answerButton);
         answersList.appendChild(answerItem);
       });
+
       questionDiv.appendChild(answersList);
     }
 
     categoryContainer.appendChild(questionDiv);
   });
 
-  // Function to check answers
   checkAnswersBtn.addEventListener('click', () => {
     let score = 0;
-
+  
     filteredQuestions.forEach((question, index) => {
       // If it's a multiple choice question
       if (question.type === "multiple") {
         const answerButtons = document.querySelectorAll(
           `button[data-question-id="${index}"]`
         );
-
+  
         // Find the selected answer
         const selectedButton = [...answerButtons].find(button =>
           button.classList.contains('selectedAnswer')
         );
-
+  
         // Reset classes for all buttons
         answerButtons.forEach(button => {
-          button.classList.remove('correctAnswer', 'wrongAnswer');
-          button.classList.add('neutralAnswer'); // Reset to neutral state
+          button.classList.remove('correctAnswer', 'wrongAnswer', 'filledCorrectAnswer');
           button.disabled = true; // Disable all buttons
         });
-
+  
         if (selectedButton) {
           const selectedAnswer = selectedButton.dataset.answer;
-
+  
           if (selectedAnswer === question.correctAnswer) {
             // Mark correct answer
-            selectedButton.classList.remove('neutralAnswer');
             selectedButton.classList.add('correctAnswer');
             score++;
           } else {
             // Mark wrong answer
-            selectedButton.classList.remove('neutralAnswer');
             selectedButton.classList.add('wrongAnswer');
-
+  
             // Highlight the correct answer
             const correctButton = [...answerButtons].find(
               button => button.dataset.answer === question.correctAnswer
             );
             if (correctButton) {
-              correctButton.classList.remove('neutralAnswer');
               correctButton.classList.add('correctAnswer');
             }
           }
-        }
-      }
-
-      // If it's a typed answer question
-      if (question.type === "typed") {
-        const inputField = document.querySelector(
-          `input[data-question-id="${index}"]`
-        );
-
-        // Check the typed answer
-        const userAnswer = inputField.value.trim().toLowerCase();
-        const correctAnswer = question.correctAnswer.toLowerCase();
-
-        if (userAnswer === correctAnswer) {
-          inputField.classList.add('correctAnswer');
-          score++;
         } else {
-          inputField.classList.add('wrongAnswer');
+          // If no answer was selected, highlight the correct answer
+          const correctButton = [...answerButtons].find(
+            button => button.dataset.answer === question.correctAnswer
+          );
+          if (correctButton) {
+            correctButton.classList.add('filledCorrectAnswer');
+          }
         }
-
-        // Disable the input field after checking
-        inputField.disabled = true;
       }
     });
-
+  
     // Display the score
     scoreDisplay.textContent = `Your score is: ${score} out of ${filteredQuestions.length}`;
   });
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset answer buttons and typed answers
     const answerButtons = document.querySelectorAll('button[data-question-id]');
     answerButtons.forEach(button => {
-      button.classList.remove('correctAnswer', 'wrongAnswer', 'selectedAnswer');
+      button.classList.remove('correctAnswer', 'wrongAnswer', 'selectedAnswer', 'filledCorrectAnswer');
       button.classList.add('neutralAnswer');
       button.disabled = false; // Re-enable all buttons
     });
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedInputs = document.querySelectorAll('.typedAnswerInput');
     typedInputs.forEach(input => {
       input.value = ''; // Clear the input field
-      input.classList.remove('correctAnswer', 'wrongAnswer');
+      input.classList.remove('correctAnswer', 'wrongAnswer', 'filledCorrectAnswer');
       input.disabled = false; // Re-enable input field
     });
 
