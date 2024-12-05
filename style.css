@@ -9,6 +9,69 @@
   --light-blue: #87ADFC;
 }
 
+/* 
+A1 - yellow
+A2 - orange
+B1 - blue
+B2 - purple
+C1 - pink
+C2 - green
+*/
+
+.a1:hover {
+  background-color: var(--yellow);
+  box-shadow: 10px 10px black;
+}
+
+.a2:hover {
+  background-color: var(--orange);
+  box-shadow: 10px 10px black;
+}
+
+.b1:hover {
+  background-color: var(--light-blue);
+  box-shadow: 10px 10px black;
+}
+
+.b2:hover {
+  background-color: var(--purple);
+  box-shadow: 10px 10px black;
+}
+
+.c1:hover {
+  background-color: var(--pink);
+  box-shadow: 10px 10px black;
+}
+
+.c2:hover {
+  background-color: var(--green);
+  box-shadow: 10px 10px black;
+}
+
+.a1S {
+  background-color: var(--yellow);
+}
+
+.a2S {
+  background-color: var(--orange);
+}
+
+.b1S {
+  background-color: var(--light-blue);
+}
+
+.b2S {
+  background-color: var(--purple);
+}
+
+.c1S {
+  background-color: var(--pink);
+}
+
+.c2S {
+  background-color: var(--green);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -67,19 +130,24 @@ main {
   padding: 0 3rem;
 }
 
+div #heading {
+  font-family: Poppins;
+  font-size: xxx-large;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
 .categoryContainer {
     display: grid;
     gap: 1rem;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 80px;
 }
 
 .categoryBox {
-  background-color: aliceblue;
   border: 1px solid black;
-}
-
-.categoryBox:hover {
-  background-color: rgb(215, 228, 240);
+  position: relative;
 }
 
 .categoryBox a {
@@ -91,12 +159,25 @@ main {
   justify-content: center;
 }
 
+.categoryBox div {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins;
+}
+
 /* exercises */
 
 .exerciseBox {
-  background-color: #5279a9;
-  width: 200px;
+  border: 1px solid black;
+  width: 300px;
   margin-bottom: 20px;
+  padding: 0 0 0 1rem;
 }
 
 .exerciseBox a {
@@ -118,6 +199,21 @@ main {
 #score {
   margin-top: 20px;
   font-weight: bold;
+}
+
+#pastSimple:hover, #pastContinuous:hover, #pastPerfect:hover, #pastPerfectContinuous:hover{
+  background-color: var(--yellow);
+  /* box-shadow: 10px 10px black; */
+}
+
+#presentSimple:hover, #presentContinuous:hover, #presentPerfect:hover, #presentPerfectContinuous:hover{
+  background-color: var(--green);
+  /* box-shadow: 10px 10px black; */
+}
+
+#futureSimple:hover, #futureContinuous:hover, #futurePerfect:hover, #futurePerfectContinuous:hover{
+  background-color: var(--pink);
+  /* box-shadow: 10px 10px black; */
 }
 
 /* Neutral answer */
@@ -207,14 +303,12 @@ select {
 
 /* Add styles for correct and wrong inputs */
 .correctInput {
-  border: 2px solid var(--green);
-  background-color: #a6fbd2;
-  color: #51ce91;
+  border: 2px solid black;
+  color: var(--green);
 }
 .wrongInput {
-  border: 2px solid var(--red);
-  background-color: #ffcdcc;
-  color: #EA7C79;
+  border: 2px solid black;
+  color: var(--red);
 }
 
 .checkAnswersButton {
@@ -231,4 +325,8 @@ select {
   padding: 1rem 2rem;
   cursor: pointer;
   width: auto;
+}
+
+.pink {
+  background-color: var(--pink);
 }

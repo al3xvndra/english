@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     question => question.category === category && question.set == set
   );
 
+  if (category) {
+    const categoryHeading = document.createElement('h1');
+    categoryHeading.textContent = category + " ex. " + set;
+    categoryHeading.classList.add('categoryHeading'); // Optional: Add a class for styling
+    exerciseHeading.appendChild(categoryHeading);
+  }
+
   // Dynamically generate question elements
   filteredQuestions.forEach((question, index) => {
     const questionDiv = document.createElement('div');
