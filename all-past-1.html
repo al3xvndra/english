@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Quiz</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script src="input.js" defer></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="./tenses/tenses.html">tenses</a></li>
+      <li><a href="./grammar/grammar.html">grammar</a></li>
+      <li><a href="./vocabulary/vocabulary.html">vocabulary</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <div class="exercise-div">
+      <div class="text-div">
+    <h1 class="h">A Walk Down Memory Lane</h1>
+    <div class="score-div"><p id="score">Your score is: </p><p id="perc"></p></div>
+    <form>
+      <p class="inputParagraph">Last summer, Emily decided to visit her grandparents, who lived in a small village. She <input class="neutralInput" type="text" data-answer="had planned"> (plan) the trip for weeks because she hadn’t seen them for a long time. When she finally arrived, her grandparents <input class="neutralInput" type="text" data-answer="were"> (be) delighted to see her and <input class="neutralInput" type="text" data-answer="told"> (tell) her all about what <input class="neutralInput" type="text" data-answer="had been happening"> (happen) in the village since her last visit.</p>
+
+      <p class="inputParagraph">The next morning, Emily woke up early and <input class="neutralInput" type="text" data-answer="headed"> (head) out for a walk. As she wandered through the village, she <input class="neutralInput" type="text" data-answer="noticed"> (notice) that many things <input class="neutralInput" type="text" data-answer="had changed"> (change). The old bakery, where she <input class="neutralInput" type="text" data-answer="used to buy"> (buy) pastries as a child, had been replaced by a modern café. She <input class="neutralInput" type="text" data-answer="felt"> (feel) a little sad about it but <input class="neutralInput" type="text" data-answer="decided"> (decide) to give the café a try.</p>
+
+      <p class="inputParagraph">As she <input class="neutralInput" type="text" data-answer="was walking"> (walk) back home, Emily thought about all the changes. Her grandparents <input class="neutralInput" type="text" data-answer="had already prepared"> (already prepare) a delicious breakfast. They <input class="neutralInput" type="text" data-answer="were talking"> (talk) and laughed together, sharing stories from the past. Emily <input class="neutralInput" type="text" data-answer="told"> (tell) them how much she <input class="neutralInput" type="text" data-answer="had enjoyed"> (enjoy) her walk and mentioned the changes she <input class="neutralInput" type="text" data-answer="had seen"> (see). Her grandparents <input class="neutralInput" type="text" data-answer="smiled"> (smile) and said, "Time always brings changes, but the memories remain."</p>
+
+      <p class="inputParagraph">That afternoon, Emily and her grandparents <input class="neutralInput" type="text" data-answer="sat"> (sit) under the big oak tree in their garden. They <input class="neutralInput" type="text" data-answer="talked"> (talk) about their favorite memories from when Emily was younger. It <input class="neutralInput" type="text" data-answer="was"> (be) a day she would always remember, filled with laughter, love, and a sense of home.</p>
+      <input id="submitButton" class="checkAnswersButton" type="button" value="Check Answers">
+      <input id="resetButton" class="resetButton" type="button" value="Reset">
+    </form>
+    </div>
+    <div class="answers-div">
+      <p class="answerParagraph">1. The correct answer is <span style="font-weight: 900;">had planned</span> because it describes an action completed before another past event.</p> 
+      <p class="answerParagraph">2. The correct answer is <span style="font-weight: 900;">were</span> because it is the past tense of the verb "to be" used with the plural subject "grandparents" in a descriptive context.</p> 
+      <p class="answerParagraph">3. The correct answer is <span style="font-weight: 900;">told</span> because it describes a simple past action that happened and finished in the past.</p> 
+      <p class="answerParagraph">4. The correct answer is <span style="font-weight: 900;">had been happening</span> because it refers to an ongoing action that started before the main event and continued up to a certain point in the past.</p> 
+      <p class="answerParagraph">5. The correct answer is <span style="font-weight: 900;">headed</span> because it describes a completed action in the past (Emily decided to go for a walk).</p> 
+      <p class="answerParagraph">6. The correct answer is <span style="font-weight: 900;">noticed</span> because it describes an action completed in the past as Emily walked through the village.</p> 
+      <p class="answerParagraph">7. The correct answer is <span style="font-weight: 900;">had changed</span> because it describes an action that was completed before Emily noticed it.</p> 
+      <p class="answerParagraph">8. The correct answer is <span style="font-weight: 900;">used to buy</span> because it refers to a habitual action in the past, something Emily did regularly as a child.</p> 
+      <p class="answerParagraph">9. The correct answer is <span style="font-weight: 900;">felt</span> because it describes a completed action in the past, reflecting Emily's emotional state at that moment.</p> 
+      <p class="answerParagraph">10. The correct answer is <span style="font-weight: 900;">decided</span> because it describes an action completed in the past, which influenced her next steps.</p> 
+      <p class="answerParagraph">11. The correct answer is <span style="font-weight: 900;">was walking</span> because it describes an ongoing action in the past (Emily was in the middle of her walk when she thought about the changes).</p> 
+      <p class="answerParagraph">12. The correct answer is <span style="font-weight: 900;">had already prepared</span> because it describes an action completed before Emily returned home.</p> 
+      <p class="answerParagraph">13. The correct answer is <span style="font-weight: 900;">were talking</span> because it describes an ongoing action in the past that was happening when Emily returned home.</p> 
+      <p class="answerParagraph">14. The correct answer is <span style="font-weight: 900;">told</span> because...</p> 
+      <p class="answerParagraph">15. The correct answer is <span style="font-weight: 900;">had enjoyed</span> because it describes an action that was completed before another past action (telling her grandparents).</p> 
+      <p class="answerParagraph">16. The correct answer is <span style="font-weight: 900;">had seen</span> because it refers to an action that was completed before Emily mentioned it to her grandparents.</p> 
+      <p class="answerParagraph">17. The correct answer is <span style="font-weight: 900;">smiled</span> because it describes a simple past action that happened when Emily finished speaking.</p> 
+      <p class="answerParagraph">18. The correct answer is <span style="font-weight: 900;">sat</span> because it describes a completed action in the past (Emily and her grandparents sat under the oak tree).</p> 
+      <p class="answerParagraph">19. The correct answer is <span style="font-weight: 900;">talked</span> because it describes a simple past action that occurred during their time together under the oak tree.</p> 
+      <p class="answerParagraph">20. The correct answer is <span style="font-weight: 900;">was</span> because it refers to a past state or condition, describing the memorable day that Emily experienced.</p> 
+     </div>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="./tenses/tenses.html">tenses</a></li>
+      <li><a href="./grammar/grammar.html">grammar</a></li>
+      <li><a href="./vocabulary/vocabulary.html">vocabulary</a></li>
+    </ul>
+  </footer>
+</body>
+<script src="app.js" defer></script>
+</html>

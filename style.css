@@ -138,6 +138,10 @@ div #heading {
   margin-top: 4rem;
 }
 
+.h { 
+  font-family: "Poppins";
+}
+
 .categoryContainer {
     display: grid;
     gap: 1rem;
@@ -148,15 +152,22 @@ div #heading {
 .categoryBox {
   border: 1px solid black;
   position: relative;
+  height: 90px;
 }
 
 .categoryBox a {
   text-decoration: none;
   color: black;
-  font-family: "Playfair Display";
+  font-family: "Poppins";
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.yellow a {
+  font-family: "Poppins";
 }
 
 .categoryBox div {
@@ -195,11 +206,19 @@ div #heading {
 .questionBox h3 {
   margin: 0;
 }
-  
-#score {
-  margin-top: 20px;
-  font-weight: bold;
+
+.score-div {
+  background-color: var(--pink);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
   font-family: 'Poppins', sans-serif;
+  padding-top: 2rem;
+}
+
+.score-div p {
+  margin: 0.5rem 0 0 0;
 }
 
 #pastSimple:hover, #pastContinuous:hover, #pastPerfect:hover, #pastPerfectContinuous:hover{
@@ -278,17 +297,40 @@ form {
   font-family: 'Poppins', sans-serif;
 }
 
-.inputParagraph {
-  margin-bottom: 1.4rem;
+.exercise-div {
+  display: flex;
 }
 
-input {
+.text-div {
+  width: 55%;
+}
+
+.answers-div {
+  width: 45%;
+  margin-top: 4rem;
+}
+
+.inputParagraph {
+  margin-bottom: 1.4rem;
+  line-height: 2.4;
+}
+
+.answerParagraph {
+  line-height: 1.4;
   border: 2px solid black;
-  padding: 5px 20px 5px 20px;
+  margin: 1rem 3rem;
+  padding: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+}
+
+input[type=text] {
+  border: 2px solid black;
+  padding: 5px 5px 5px 5px;
   margin: 0 0.2rem;
   font-family: 'Poppins', sans-serif;
-  font-size: medium;
-  width: 100px;
+  font-size: small;
+  width: 120px;
 }
 
 input[type=text]:focus {
@@ -336,6 +378,7 @@ select option {
   width: auto;
   margin-top: 40px;
   font-family: 'Poppins', sans-serif;
+  font-size: medium;
 }
 
 .resetButton {
@@ -345,8 +388,76 @@ select option {
   cursor: pointer;
   width: auto;
   font-family: 'Poppins', sans-serif;
+  font-size: medium;
 }
 
 .pink {
   background-color: var(--pink);
+}
+
+.pink:hover {
+  background-color: white;
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.green:hover {
+  background-color: white;
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.yellow:hover {
+  background-color: white;
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.red:hover {
+  background-color: white;
+}
+
+.purple {
+  background-color: var(--purple);
+}
+
+.purple:hover {
+  background-color: white;
+}
+
+footer {
+  background-color: rgb(43, 43, 43);
+  margin: 50px 0 0 0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  text-transform: capitalize;
+  padding: 0.4rem 2rem;
+}
+
+footer ul li a:hover {
+  color: rgb(188, 188, 188);
 }

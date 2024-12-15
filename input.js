@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.querySelector('#submitButton');
     const resetButton = document.querySelector('#resetButton');
     const inputs = document.querySelectorAll('input[data-answer], select[data-answer]');
+    const spDisplay = document.querySelector('.score-div')
     const scoreDisplay = document.querySelector('#score');
+    const percDisplay = document.querySelector('#perc');
+    const answersDiv = document.querySelector('.answers-div');
 
     // Clear all inputs and dropdowns on page refresh
     inputs.forEach(input => {
@@ -16,9 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         input.disabled = false; // Ensure inputs are enabled on page load
     });
 
-    // Clear the score display on page refresh
+    // Clear the score display and hide answers-div on page refresh
     scoreDisplay.textContent = '';
-
+    answersDiv.style.display = 'none'; // Hide the answers-div initially
+    spDisplay.style.display = 'none';
     // Submit button logic
     submitButton.addEventListener("click", () => {
         let score = 0;
@@ -60,8 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
             input.disabled = true;
         });
 
+        let percent = ((score * 100) / count).toFixed(2);
+
         // Display the score
-        scoreDisplay.textContent = `Your score is: ${score} out of ${count}`;
+        scoreDisplay.textContent = `Your score is: ${percent}%`;
+        percDisplay.textContent = `Correct answers: ${score} out of ${count}`;
+        // Show the answers-div
+        answersDiv.style.display = 'block';
+        spDisplay.style.display = 'flex';
+        // Scroll back to the top of the page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     // Reset button logic
@@ -79,5 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear the score display
         scoreDisplay.textContent = '';
+
+        // Hide the answers-div
+        answersDiv.style.display = 'none';
+        spDisplay.style.display = 'none';
+
+        // Scroll back to the top of the page
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
